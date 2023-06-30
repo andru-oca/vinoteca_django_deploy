@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 
 APPS = [
-    "vino_app"
+    "app_vino"
 ]
 
 EXTERNALS = [
