@@ -101,7 +101,7 @@ MYSQL_DATABASE              = USUARIO_PYTHON_ANYWHERE+"$vinoteca"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': MYSQL_DATABASE
+        'NAME': MYSQL_DATABASE , 
         'USER': USUARIO_PYTHON_ANYWHERE,
         'PASSWORD': PASSWORD_MYSQL,
         'HOST': MYSQL_PYTHON_ANYWHERE_HOST,
