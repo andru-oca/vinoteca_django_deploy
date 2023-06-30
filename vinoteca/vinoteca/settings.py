@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-+$j7v#z&s@*v##%#s=5s&jab(nn2q$emjklxlv)neb^pzo#onr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["celesteTrujillo.pythonanywhere.com"]
 
 
 
@@ -84,31 +84,31 @@ WSGI_APPLICATION = 'vinoteca.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-
-USUARIO_PYTHON_ANYWHERE     = "celesteGomez"
-PASSWORD_MYSQL              = "vinoteca1234"
-MYSQL_PYTHON_ANYWHERE_HOST  = USUARIO_PYTHON_ANYWHERE+".mysql.pythonanywhere-services.com"
-MYSQL_DATABASE              = USUARIO_PYTHON_ANYWHERE+"$vinoteca"
-
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': MYSQL_DATABASE , 
-        'USER': USUARIO_PYTHON_ANYWHERE,
-        'PASSWORD': PASSWORD_MYSQL,
-        'HOST': MYSQL_PYTHON_ANYWHERE_HOST,
-        'PORT': '3306',
-        'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+# USUARIO_PYTHON_ANYWHERE     = "celesteGomez"
+# PASSWORD_MYSQL              = "vinoteca1234"
+# MYSQL_PYTHON_ANYWHERE_HOST  = USUARIO_PYTHON_ANYWHERE+".mysql.pythonanywhere-services.com"
+# MYSQL_DATABASE              = USUARIO_PYTHON_ANYWHERE+"$vinoteca"
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': MYSQL_DATABASE , 
+#         'USER': USUARIO_PYTHON_ANYWHERE,
+#         'PASSWORD': PASSWORD_MYSQL,
+#         'HOST': MYSQL_PYTHON_ANYWHERE_HOST,
+#         'PORT': '3306',
+#         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"},
+#     }
+# }
 
 
 
@@ -147,8 +147,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS = [
-    BASE_DIR / "static"]
+
+# STATICFILES_DIRS = [
+#     BASE_DIR / "static"]
+
+STATIC_ROOT = BASE_DIR / "static"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
