@@ -1,5 +1,17 @@
-{% extends 'base_vinoteca.html' %} {% block content %}
-
+{% extends 'base_vinoteca.html' %}
+{% load static %}
+{% block content %}
+<video
+id="background-video"
+autoplay
+loop
+muted
+>
+<source
+    src="{% static 'media/programmer.mp4' %}"
+    type="video/mp4"
+/>
+</video>
 <main>
     <div class="main-color-vinos">
         <h1>Estas seguro ue deseas borrar este vino?</h1>

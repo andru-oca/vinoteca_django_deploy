@@ -1,10 +1,21 @@
 {% extends 'base_vinoteca.html' %}
+{% load static %}
 {% block content %}
-
+<video
+id="background-video"
+autoplay
+loop
+muted
+>
+<source
+    src="{% static 'media/programmer.mp4' %}"
+    type="video/mp4"
+/>
+</video>
 <main>
     <div class="main-color-vinos">
         <h1>CREAR VINO</h1>
-        <form method="post">
+        <form method="POST">
             {% csrf_token %}
             <div>{{form.as_p}}</div>
             <input type="submit" value="{{ tipo }}" />
